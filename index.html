@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenwalk</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Hi, my dear visitor!</h1>
+        <p>I'm glad you are here. I wanted to leave a few moments that I caught on my way to my friend's place. It might not be much, but you get to choose for yourself which path you want to follow, what you want to avoid, and what is truly worth your time. Enjoy!</p>
+    
+    </header>
+            <button id="mainBtn" onclick="handleMainClick()" class="start_button">Click on me to start!!!</button>
+
+        
+            <button id="btn2" style="display: none;" onclick="handleBtn2Click()" class="button_2">Better click here <:</button>
+            <button id="btn3" style="display: none;" onclick="handleBtn3Click()" class="button_2">Oopsie, try this one</button>
+            <button id="btn4" style="display: none;" onclick="handleBtn4Click()" class="button_2">Maybe again?</button>
+            <button id="btn5" style="display: none;" onclick="handleBtn5Click()" class="button_2">This should be it!</button>
+            <button id="btn6" style="display: none;" onclick="handleBtn6Click()" class="button_2">Nevermind</button>
+
+            <script>
+  let mainClickCount = 0;
+
+  function randomizeButtonPosition(button) {
+    const maxX = window.innerWidth - button.offsetWidth - 20;
+    const maxY = window.innerHeight - button.offsetHeight - 20;
+    const left = Math.max(10, Math.random() * maxX);
+    const top = Math.max(10, Math.random() * maxY);
+
+    button.style.position = "fixed";
+    button.style.left = left + "px";
+    button.style.top = top + "px";
+    button.style.right = "auto";
+    button.style.bottom = "auto";
+  }
+
+  function showButton(buttonId) {
+    const button = document.getElementById(buttonId);
+    button.style.display = "inline-block";
+    randomizeButtonPosition(button);
+  }
+
+  function handleMainClick() {
+    mainClickCount++;
+
+    if (mainClickCount === 1) {
+      showButton("btn2");
+    } else if (mainClickCount === 2) {
+      window.location.href = "main_page.html";
+    }
+  }
+
+  function handleBtn2Click() {
+    document.getElementById("btn2").style.display = "none";
+    showButton("btn3");
+  }
+
+  function handleBtn3Click() {
+    document.getElementById("btn3").style.display = "none";
+    showButton("btn4");
+  }
+
+  function handleBtn4Click() {
+    document.getElementById("btn4").style.display = "none";
+    showButton("btn5");
+  }
+
+  function handleBtn5Click() {
+    document.getElementById("btn5").style.display = "none";
+    showButton("btn6");
+  }
+
+  function handleBtn6Click() {
+    document.getElementById("btn6").style.display = "none";
+    window.location.href = "3_page.html";
+  }
+</script>
+
+</body>
+</html>

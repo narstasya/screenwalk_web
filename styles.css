@@ -1,0 +1,52 @@
+
+
+body {
+    margin: 0;
+    background-color: bisque;
+    color: brown;
+}
+
+h1 {
+    font-family: "BBH Bartle", sans-serif;
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+p{
+    font-family: "Red Rose", sans-serif;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.start_button {
+    background-color: brown;
+    color: bisque;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button_2 {
+    background-color:rgb(0, 89, 214);
+    color: bisque;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.start_button:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.button_2:hover {
+    background-color: rgb(0, 22, 133);
+    color:azure;
+}
